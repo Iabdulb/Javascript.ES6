@@ -6,8 +6,10 @@ let myName = "Abdul Basit"
 console.log(myNumber);
 console.log(myName);
 
-myNumber = 100;
+myNumber = 170;
 myName = "Abdul Basit";
 
 console.log(myNumber);
 console.log(myName);
+
+
