@@ -1,90 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .converter {
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        input[type="number"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .result {
-            font-weight: bold;
-        }
-    </style>
+    <title>Motorcycle E-Commerce</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    
 </head>
 <body>
+    <header>
+        <h1>Motorcycle Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Motorcycles</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="products">
+        <div class="product-slider">
+            <div class="product">
+                <img src="./images/pk scooty 70cc.png" alt="">
+                <h2>Motorcycle Model 1</h2>
+                <p>Price: $10,000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/pk 110 cc cheetah.png" alt="">
+                <h2>Motorcycle Model 2</h2>
+                <p>Price: $12,000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/pk 125cc.png" alt="">
+                <h2>Motorcycle Model 2</h2>
+                <p>Price: $12,000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/pk 175cc loader.png" alt="">
+                <h2>Motorcycle Model 2</h2>
+                <p>Price: $12,000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/pk sultan.png" alt="">
+                <h2>Motorcycle Model 2</h2>
+                <p>Price: $12,000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/rickshaw.png" alt="">
+                <h2>Motorcycle Model 2</h2>
+                <p>Price: $12,000</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="container">
+            <form action="action_page.php">
+  
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+            <label for="City">City</label>
+            <select id="City" name="City">
+            <option value="Peshawar">Peshawar</option>
+            <option value="Mardan">Mardan</option>
+            <option value="Nowshera">Nowshera</option>
+            </select>
+  
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+            <input type="submit" value="Submit">
+  
+            </form>
+            </div>
 
-<div class="converter">
-    <h2>Temperature Converter</h2>
-    <input type="number" id="celsiusInput" placeholder="Celsius" step="0.01">
-    <button onclick="convertToCelsius()">Convert to Fahrenheit</button>
-    <br>
-    <input type="number" id="fahrenheitInput" placeholder="Fahrenheit" step="0.01">
-    <button onclick="convertToFahrenheit()">Convert to Celsius</button>
-    <p class="result" id="result"></p>
-</div>
-
-<script>
-    function convertToCelsius() {
-        var fahrenheit = parseFloat(document.getElementById('fahrenheitInput').value);
-        if (!isNaN(fahrenheit)) {
-            var celsius = (fahrenheit - 32) * 5 / 9;
-            document.getElementById('celsiusInput').value = celsius.toFixed(2);
-            document.getElementById('result').innerText = celsius.toFixed(2) + '°C';
-        } else {
-            document.getElementById('result').innerText = 'Please enter a valid number';
-        }
-    }
-
-    function convertToFahrenheit() {
-        var celsius = parseFloat(document.getElementById('celsiusInput').value);
-        if (!isNaN(celsius)) {
-            var fahrenheit = celsius * 9 / 5 + 32;
-            document.getElementById('fahrenheitInput').value = fahrenheit.toFixed(2);
-            document.getElementById('result').innerText = fahrenheit.toFixed(2) + '°F';
-        } else {
-            document.getElementById('result').innerText = 'Please enter a valid number';
-        }
-    }
-</script>
-
+            </div>
+            </section>
+    <footer>
+        <p>&copy; 2023 Motorcycle Store</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
