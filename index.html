@@ -8,12 +8,16 @@
         <h1>Converter App</h1>
         <form id="converterForm">
             <div class="input-group">
-                <input type="number" id="inputValue" placeholder="Enter value to convert (1-5000)" min="1" max="5000" required/>
+                <input type="number" id="inputValue" placeholder="Enter value to convert" min="1" max="5000" required/>
                 <select id="conversionType">
                     <option value="cmToInches">Centimeters to Inches</option>
                     <option value="inchesToCm">Inches to Centimeters</option>
                     <option value="CelsiusToFahrenheit">Celsius to Fahrenheit</option>
                     <option value="FahrenheitToCelsius">Fahrenheit to Celsius</option>
+                    <option value="sqFeetToYard">Square Feet to Yard</option>
+                    <option value="yardToSqFeet">Yard to Square Feet</option>
+                    <option value="kmToMiles">Kilometers to Miles</option>
+                    <option value="milesToKm">Miles to Kilometers</option>
                     <!-- Add other options here -->
                 </select>
             </div>
@@ -21,6 +25,16 @@
         </form>
         <div id="result"></div>
     </div>
+
+    <div class="grade-checker">
+        <h2>Grade Checker</h2>
+        <form id="gradeForm">
+            <input type="number" id="gradeInput" placeholder="Enter percentage (0-100)" min="0" max="100" required/>
+            <button type="button" onclick="checkGrade()">Check Grade</button>
+        </form>
+        <div id="gradeResult"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
