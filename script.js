@@ -1,14 +1,22 @@
-const products = document.querySelectorAll('.product');
-        let currentProductIndex = 0;
-        
-        function showNextProduct() {
-            products[currentProductIndex].style.display = 'none';
-            currentProductIndex = (currentProductIndex + 1) % products.length;
-            products[currentProductIndex].style.display = 'block';
+function convert() {
+    var inputValue = parseFloat(document.getElementById('inputValue').value);
+    var conversionType = document.getElementById('conversionType').value;
+    var result = 0;
+
+    if (inputValue >= 1 && inputValue <= 5000) {
+        if (conversionType === "cmToInches") {
+            result = inputValue * 0.393701;
+        } else if (conversionType === "inchesToCm") {
+            result = inputValue / 0.393701;
         }
-        
-        // Initially display the first product
-        products[currentProductIndex].style.display = 'block';
-        
-        // Automatically transition to the next product every 3 seconds
-        setInterval(showNextProduct, 3000);
+        if (conversionType === "CelsiusToFahrenheit") {
+            result = inputValue * 89.6;
+            else if (conversionType === "FahrenheitToCelsius") {
+                result = inputValue / 0;
+        // Add other conversion options here
+
+        document.getElementById('result').innerHTML = "Result: " + result.toFixed(2);
+    } else {
+        document.getElementById('result').innerHTML = "Please enter a value between 1 and 5000.";
+    }
+}

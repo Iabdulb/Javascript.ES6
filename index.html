@@ -1,93 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Motorcycle E-Commerce</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    
 </head>
 <body>
-    <header>
-        <h1>A Name of Quality and Trust</h1>
-        <div class="header">
-            <a href="#default" class="logo"><img src="./images/qadarmand-enterprises-high-resolution-logo.png" alt=""></a>
-            <div class="header-right">
-              <a class="active" href="#home">Home</a>
-              <a href="#Products/Service">Products/Service</a>
-              <a href="#contact">Contact</a>
-              <a href="#about">About</a>
+    <div class="converter-app">
+        <h1>Converter App</h1>
+        <form id="converterForm">
+            <div class="input-group">
+                <input type="number" id="inputValue" placeholder="Enter value to convert (1-5000)" min="1" max="5000" required/>
+                <select id="conversionType">
+                    <option value="cmToInches">Centimeters to Inches</option>
+                    <option value="inchesToCm">Inches to Centimeters</option>
+                    <option value="CelsiusToFahrenheit">Celsius to Fahrenheit</option>
+                    <option value="FahrenheitToCelsius">Fahrenheit to Celsius</option>
+                    <!-- Add other options here -->
+                </select>
             </div>
-          </div>
-        
-    </header>
-    <section class="products">
-        <div class="product-slider">
-            <div class="product">
-                <img src="./images/pk scooty 70cc.png" alt="">
-                <h2>Motorcycle Model 1</h2>
-                <p>Price: $10,000</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="./images/pk 110 cc cheetah.png" alt="">
-                <h2>Motorcycle Model 2</h2>
-                <p>Price: $12,000</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="./images/pk 125cc.png" alt="">
-                <h2>Motorcycle Model 2</h2>
-                <p>Price: $12,000</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="./images/pk 175cc loader.png" alt="">
-                <h2>Motorcycle Model 2</h2>
-                <p>Price: $12,000</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="./images/pk sultan.png" alt="">
-                <h2>Motorcycle Model 2</h2>
-                <p>Price: $12,000</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="./images/rickshaw.png" alt="">
-                <h2>Motorcycle Model 2</h2>
-                <p>Price: $12,000</p>
-                <button>Add to Cart</button>
-            </div>
-            
-            <div class="container">
-            <form action="action_page.php">
-  
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-  
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-  
-            <label for="City">City</label>
-            <select id="City" name="City">
-            <option value="Peshawar">Peshawar</option>
-            <option value="Mardan">Mardan</option>
-            <option value="Nowshera">Nowshera</option>
-            </select>
-  
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-  
-            <input type="submit" value="Submit">
-  
-            </form>
-            </div>
-
-            </div>
-            </section>
-    <footer>
-        <p>&copy; 2023 Motorcycle Store</p>
-    </footer>
-    
+            <button type="button" onclick="convert(CelsiusToFahrenheit)">Convert</button>
+        </form>
+        <div id="result"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

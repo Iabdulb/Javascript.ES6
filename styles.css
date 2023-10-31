@@ -1,110 +1,29 @@
-/* Reset some default styles for consistency */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
-/* Style the header */
-header {
-    background-color: #333;
-    color: white;
+.converter-app {
     text-align: center;
-    padding: 20px;
+    margin-top: 50px;
 }
 
-.header .logo img {
-    max-width: 100px;
-    height: auto;
+h1 {
+    color: #333;
 }
 
-.header-right a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-    font-weight: bold;
+.input-group {
+    margin: 20px 0;
 }
 
-/* Style the products section */
-.products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 20px;
-}
-
-.product {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-}
-
-.product h2 {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.product p {
-    font-weight: bold;
-    color: #0073e6;
+input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 200px;
 }
 
 button {
-    background-color: #0073e6;
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
 }
 
-/* Style the contact form */
-.container {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    align-content: flex-end;
-}
-
-label, input, select, textarea {
-    display: block;
-    margin: 10px 0;
-}
-
-input[type="text"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-}
-
-input[type="submit"] {
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-/* Style the footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Make the form elements responsive */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
+button:hover {
+    opacity: 0.8;
 }
